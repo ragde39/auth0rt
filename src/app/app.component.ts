@@ -1,12 +1,16 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
+import { HeaderComponent } from './auth/header/header.component';
+import { IndexComponent } from './pages/index/index.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  standalone: true,
+  imports: [CommonModule, RouterOutlet],
+  template: ` <router-outlet></router-outlet> `,
+  styles: [],
 })
 export class AppComponent {
-  title = 'auth';
+  title = 'frontend';
 }
